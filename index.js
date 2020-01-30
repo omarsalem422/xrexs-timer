@@ -7,7 +7,11 @@ class Timer {
     this.startButton.addEventListener('click', this.start );
 
   }
-  start() {
+  // start() {
+  //   console.log("Time to start timer ...");
+  // }
+
+  start = () => {
     console.log("Time to start timer ...");
   }
 }
