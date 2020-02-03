@@ -4,16 +4,22 @@ class Timer {
     this.startButton = startButton;
     this.pauseButton = pauseButton;
 
-    this.startButton.addEventListener('click', this.start );
+    // this.startButton.addEventListener('click', this.start.bind(this) );
+    this.startButton.addEventListener('click', this.start);
 
   }
   // start() {
-  //   console.log("Time to start timer ...");
+  //   //console.log("Time to start timer ...");
+  //   this.importantMethodToCall()
   // }
 
   start = () => {
     console.log("Time to start timer ...");
+    //this.importantMethodToCall();
   }
+  // importantMethodToCall() {
+  //   console.log("VERY VERY IMPORTANT");
+  // }
 }
 
 const durationInput = document.querySelector("#duration");
