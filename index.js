@@ -24,12 +24,19 @@ class Timer {
   };
 
   tick = () => {
-   const timeremaining = parseFloat(this.durationInput.value);
-   this.durationInput.value = timeremaining - 1;
+   this.timeRemaining = this.timeRemaining - 1;
   };
 
   pause = () => {
     clearInterval(this.interval);
+  }
+
+  get timeRemaining() {
+    return parseFloat(this.durationInput.value);
+  }
+
+  set timeRemaining(time) {
+    this.durationInput.value = time;
   }
 }
 
