@@ -5,21 +5,31 @@ class Timer {
     this.pauseButton = pauseButton;
 
     // this.startButton.addEventListener('click', this.start.bind(this) );
-    this.startButton.addEventListener('click', this.start);
-
+    this.startButton.addEventListener("click", this.start);
+    this.pauseButton.addEventListener('click', this.pause);
   }
+
   // start() {
   //   //console.log("Time to start timer ...");
   //   this.importantMethodToCall()
   // }
-
-  start = () => {
-    console.log("Time to start timer ...");
-    //this.importantMethodToCall();
-  }
   // importantMethodToCall() {
   //   console.log("VERY VERY IMPORTANT");
   // }
+
+  start = () => {
+    this.tick();
+    this.interval = setInterval(this.tick, 1000);
+    
+  };
+
+  tick = () => {
+    console.log("tick");
+  };
+
+  pause = () => {
+    clearInterval(this.interval);
+  }
 }
 
 const durationInput = document.querySelector("#duration");
